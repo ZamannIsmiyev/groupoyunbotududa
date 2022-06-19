@@ -33,8 +33,8 @@ const getGreetMessage = isGroup =>
 	/chart - 🌎 Qlobal Reyting
 	/botlist - 📌 Hazır deyil
 	
-	🧑‍💻 Qurucu: @lRevanl 🇦🇿
-✅Rəsmi Kanallar: @cGuesMasterResmi, @lRevanlBlog 🤍
+	🧑‍💻 Sahibim: @ismiyev95 🦁
+✅Rəsmi Kanallar: @ASOResmi 🇦🇿, @WerabliAnlar 🍷
 `)
 const getRandomPerson = () => {
 	let imagePath = "./photos"
@@ -106,7 +106,7 @@ const stopGame = (ctx, chatId) => {
 						.map((member, index) => `${["🏆", "🎖", "🏅"][index] || "🔸"} ${index + 1}. ${bold(member.firstName)}: ${numberWithSpaces(member.score)} ${pluralize(member.score, "⚡xal", "⚡xal", "⚡xal")}`)
 						.join("\n")}
 
-					❤️ Botun Rəsmi Kanalına Abunə Olmağı Unutmayaq. @cGuesMasterResmi
+					❤️ Botun Rəsmi Kanalına Abunə Olmağı Unutmayaq. @ASOResmi 🇦🇿
 					🔄 /game - Bir daha?
 				`)
 			)
@@ -115,7 +115,7 @@ const stopGame = (ctx, chatId) => {
 				trueTrim(`
 					*🏁 Oyun Oynamadığınız Üçün Qalib Yoxdur. .*
 
-					❤️ Botun Rəsmi Kanalına Abunə Olmağı Unutmayaq. @cGuesMasterResmi
+					❤️ Botun Rəsmi Kanalına Abunə Olmağı Unutmayaq. @ASOResmi 🇦🇿
 					🔄 /game - Bir daha?
 				`)
 			)
@@ -212,7 +212,7 @@ const startGame = (ctx, chatId) => {
 					}
 				)
 			} else {
-				ctx.reply(" Mənim lə Oynamadığın Üçün Oyunu Sonlandırdım ❌ .")
+				ctx.reply(" Mənlə Oynamadığın Üçün Oyunu Sonlandırdım ❌ .")
 				stopGame(ctx, chatId)
 				return
 			}
@@ -261,7 +261,7 @@ bot.command("game", ctx => {
 		} else {
 			createChat(chatId)
 		}
-		ctx.replyWithMarkdown("🥰 Təxmin Oyunu Başlayır Hər Birinizə Uğurlar. 🥰")
+		ctx.replyWithMarkdown("🥰 Yaş Təxmin Oyunu Başlayır Hər Birinizə Uğurlar. 🥰")
 		startGame(ctx, chatId)
 	} else {
 		ctx.reply("🆘 Bu Əmr Qruplar Üçün Təyin Olunub 🆘")
@@ -315,7 +315,7 @@ bot.command("top", ctx => {
 						.map((member, index) => `${["🏆", "🎖", "🏅"][index] || "🔸"} ${index + 1}. ${bold(member.firstName)}: ${numberWithSpaces(member.score)} ${pluralize(member.score, "⚡xal", "⚡xal", "⚡xal")}`)
 						.join("\n")}
 
-					❤️ Botun Rəsmi Kanalına Abunə Olmağı Unutmayaq.  @cGuesMasterResmi
+					❤️ Botun Rəsmi Kanalına Abunə Olmağı Unutmayaq.  @ASOresmi 🇦🇿
 					🔄 /game - Bir daha?
 				`)
 				)
@@ -377,7 +377,7 @@ bot.command("chart", ctx => {
 
 			${topSlice.map((member, index) => `${["🏆", "🎖", "🏅"][index] || "🔸"} ${index + 1}. ${fromId === member.id ? "Sənin Xal: " : ""}${bold(member.firstName)}: ${numberWithSpaces(member.score)} ${pluralize(member.score, "⚡xal", "⚡xal", "⚡xal")}`).join("\n")}
 			${currentUser ? `...\n🔸 ${currentUser.index + 1}. ${bold(currentUser.firstName)}: ${numberWithSpaces(currentUser.score)} ${pluralize(currentUser.score, "⚡xal", "⚡xal", "⚡xal")}\n` : ""}
-			❤️ Bəzən yeni sərin botların dərc olunduğu müəllif kanalı @cGuesMasterResmi
+			❤️ Bəzən yeni sərin botların dərc olunduğu müəllif kanalı @WerabliAnlar
 			🔄 /game - Bir daha?
 		`)
 		)
